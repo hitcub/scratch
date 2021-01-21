@@ -1,4 +1,4 @@
-@extends('test.testcommon.layout')
+@extends('common.layout')
 
 @section('tagu')
   {{$tagu}}
@@ -34,10 +34,10 @@
         <form action="dailyreport_complete.php" method="post">
             <table border="1" class="m0a">
                 @if (isset($err_msgs1, $err_msgs2, $err_msgs3, $err_msgs4, $err_msgs5))
-                    <tr> 
+                    <!--<tr> 
                         <th>タイトル</th>
                         <td>@yield('err_msgs1')</td>
-                    </tr>
+                    </tr>-->
                     <tr> 
                         <th>本日の作業内容</th>
                         <td>@yield('err_msgs2')</td>

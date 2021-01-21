@@ -11,38 +11,18 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
-
-// // <<日報管理関係ルーティング>>
-Route::resource('reports', 'DailyReportController');
-// // 一覧を表示
-// Route::get();
-
-// // 登録画面を表示
-// Route::get();
-
-// // 登録確認画面を表示
-// Route::post();
-
-// // 登録実行
-// Route::post();
-
-// // 差戻しの編集画面を表示
-// Route::get();
-
-// // 削除する
-// Route::post();
-
-// // 個別の記事を表示
-// Route::get();
-
-<<<<<<< Updated upstream
-// <<ユーザー管理関係ルーティング>>
-=======
-// <<ユーザー管理関係ルーティング>>
-Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');
->>>>>>> Stashed changes
+Route::get('/', 'LoginController@login');
+Route::get('home', 'HomeController@home');
+Route::get('home_superior', 'Home_superiorController@home_superior');
+Route::get('home_infosys', 'Home_infosysController@home_infosys');
+Route::get('home', 'HomeController@home');
+Route::get('user', 'UserController@user');
+Route::get('usertouroku', 'UsertourokuController@usertouroku');
+Route::get('usertouroku_confirm', 'Usertouroku_confirmController@usertouroku_confirm');
+Route::get('usertouroku_complete', 'Usertouroku_completeController@usertouroku_complete');
+Route::get('dailylist', 'DailylistController@dailylist');
+Route::get('dailylist_superior', 'Dailylist_superiorController@dailylist_superior');
+Route::get('dailyreport', 'DailyreportController@dailyreport');
+Route::get('dailyreport_confirm', 'Dailyreport_confirmController@dailyreport_confirm');
+Route::get('dailyreport_confirm_superior', 'Dailyreport_confirm_superiorController@dailyreport_confirm_superior');
+Route::get('dailyreport_complete', 'Dailyreport_completeController@dailyreport_complete');

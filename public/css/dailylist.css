@@ -48,21 +48,50 @@ table.approval tr th{
 	background-color: #ffe0ef;
 }
 
+table tr th:nth-of-type(5) {
+	font-size: 0.7em;
+}
+
 table tr td {
-	padding: 5px;
+	padding: 15px 5px;
 	vertical-align: middle;
 }
 
 table tr td:first-of-type {
-	width: 25%;
+	width: 20%;
 }
 
 table tr td:nth-of-type(2) {
+	width: 18%;
+}
+
+table tr td:nth-of-type(3) {
+	width: 18%;
+}
+
+table tr td:nth-of-type(4) {
 	text-align: left;
 }
 
 table tr td:last-of-type {
-	width: 15%;
+	width: 11%;
+}
+
+table tr td.daurylist {
+	text-align: left;
+}
+
+table tr td.dailylist_td1 {
+	width: 25%;
+}
+
+table tr td.dailylist_td2 {
+	width: 55%;
+}
+
+tbody tr.clickable:hover td {
+	cursor: pointer;
+    background: #f9fffc;
 }
 
 @media screen and (min-width:892px){

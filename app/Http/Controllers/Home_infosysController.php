@@ -4,17 +4,17 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class UsertourokuController extends Controller
+class Home_infosysController extends Controller
 {
-    public function usertouroku () 
+    public function home_infosys () 
     {
         //ビューの動作確認用サンプルデータ作成
-        $title = 'ユーザー登録';
+        $title = 'ホーム';
         $err_msgs = ['エラー１', 'エラー２', 'エラー３'];
-        $css = 'usertouroku.css';
+        $css = 'home.css';
         $js = 'common.js';
 
         //ビューを呼び出す
-        return view('usertouroku', compact('title', 'err_msgs', 'css', 'js'));
+        return view('home_infosys', compact('title', 'err_msgs', 'css', 'js'));
     }
 }
