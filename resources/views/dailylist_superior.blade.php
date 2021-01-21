@@ -15,7 +15,7 @@
 @section('body')
     <section>
 	    <h1>@yield('title1')</h1>
-        <table border="1" class="m0a tac approval">
+        <table class="sort-table m0a tac approval" border="1">
             <thead>
                 <tr> 
                     <th>報告日</th>
@@ -60,7 +60,7 @@
     </section>
 	<section>
         <h1>@yield('title2')</h1>
-        <table border="1" class="m0a tac">
+        <table class="sort-table m0a tac general" border="1">
             <tr> 
                 <th>報告日</th>
                 <th>所属部署</th>
@@ -99,4 +99,17 @@
             @endif
         </table>
 	</section>
+    <script>
+        $(function(){
+            $('.sort-table').tablesorter({
+                textExtraction: function(node){
+                    var attr = $(node).attr('data-value');
+                    if(typeof attr !== 'undefined' && attr !== false){
+                        return attr;
+                    }
+                    return $(node).text();
+                }
+            });
+        });
+    </script>
 @endsection
